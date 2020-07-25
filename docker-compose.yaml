@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+  from-date-counter:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    environment:
+      PORT: 8000
+    ports:
+      - "8000:8000"
+    volumes:
+       - ./src/:/app/src/
+       - ./public/:/app/public/
